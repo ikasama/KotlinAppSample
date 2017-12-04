@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">PasswordManagementSample</string>
+    <string name="create_password">Create password for login.</string>
+    <string name="input_nickname">Input your nickname.</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="set_icon">Set icon</string>
+    <string name="select_from_library">Select from libraries</string>
+    <string name="boot_camera">Boot camera</string>
+    <string name="edit_account">Edit account</string>
+    <string name="account_name">Account Name</string>
+    <string name="account_password">Password</string>
+    <string name="comment">Comment</string>
+    <string name="need_camera">In order to set icon, you need to grant the permission of camera</string>
+    <string name="cannot_use_camera_without_perm">You cannot use camera without permission.</string>
+    <string name="fail_save_category">failed to save category.</string>
+    <string name="cannot_read_storage_without_perm">You cannot open image gallery without permission.</string>
+    <string name="all_category">ALL</string>
+    <string name="delete">DELETE</string>
+    <string name="edit">EDIT</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="confirm_delete_category">Are you sure to delete this category?</string>
+    <string name="confirm_delete_account">Are you sure to delete this account?</string>
+    <string name="fail_delete_account">Failed to delete account data.</string>
+    <string name="go">go</string>
+    <string name="success">success</string>
+    <string name="categoryName_validation_error">Please input category name more than 1 character but less than 64 characters.</string>
+    <string name="category_constraint_exception">Unique category naime required.</string>
+    <string name="categoryName">Category name</string>
+    <string name="input_categoryName">input category name.</string>
+    <string name="save"><u>Register</u></string>
+    <string name="fail_load_data">Failed to load image data.</string>
+    <string name="password">Password</string>
+    <string name="updatedAt">updated at:</string>
+    <string name="about_this_app">About this app</string>
+    <string name="home">Home</string>
+    <string name="category_list">Category list</string>
+    <string name="account_detail">Account details</string>
+    <string name="account_list">Account list</string>
+    <string name="edit_category">Edit category</string>
+    <string name="fail_delete_category">Failed to delete category data.</string>
+    <string name="fail_register_user">Failed to register user.</string>
+    <string name="fail_save_account">Failed to save account data.</string>
+    <string name="fail_login">Failed to login.</string>
+    <string name="register_user">Do you register an user in this setting?</string>
+    <string name="text_password" translatable="false">Password</string>
+    <string name="text_management" translatable="false">Management</string>
+    <string name="text_sample" translatable="false">Sample</string>
+    <string name="version">Version</string>
+    <string name="license">Open source license</string>
+    <string name="apache2.0" translatable="false">Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.</string>
+    <string name="bsd_conceal" translatable="false">BSD License
+
+For Conceal software
+
+Copyright (c) 2014, Facebook, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+ * Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+ * Neither the name Facebook nor the names of its contributors may be used to
+   endorse or promote products derived from this software without specific
+   prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</string>
+
+    <string name="mit_swipelayout" translatable="false">
+        The MIT License (MIT)
+
+Copyright (c) 2014 代码家
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+    </string>
+    <string name="bsd_stetho" translatable="false">
+        BSD License
+
+For Stetho software
+
+Copyright (c) 2015, Facebook, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+ * Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+ * Neither the name Facebook nor the names of its contributors may be used to
+   endorse or promote products derived from this software without specific
+   prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    </string>
+    <string name="github" translatable="false">Github</string>
+
+</resources>

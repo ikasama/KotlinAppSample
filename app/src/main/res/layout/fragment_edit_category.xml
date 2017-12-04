@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/categoryName"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:inputType="textPersonName"
+            android:hint="@string/input_categoryName"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/textName"
+            app:layout_constraintTop_toBottomOf="@id/textName"
+            android:layout_marginTop="12dp"
+            />
+
+        <Button
+            android:id="@+id/buttonIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_icon"
+            android:theme="@style/ApplicationTheme.FlatButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:padding="8dp"
+            android:maxLength="64"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editName"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="12dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/icon"
+            app:layout_constraintLeft_toRightOf="@id/buttonIcon"
+            app:layout_constraintTop_toBottomOf="@id/editName"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/marginMedium"
+            />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/save"
+            android:theme="@style/ApplicationTheme.RaisedButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonIcon"
+            android:layout_marginTop="32dp"
+            />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
