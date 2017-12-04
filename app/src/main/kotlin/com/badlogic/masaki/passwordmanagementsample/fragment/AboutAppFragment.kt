@@ -17,6 +17,7 @@ class AboutAppFragment : BaseFragment() {
 
     companion object {
         val TAG: String = AboutAppFragment::class.java.simpleName
+        val URL_GITHUB: String = "https://github.com/ikasama/KotlinAppSample"
 
         @JvmStatic
         fun newInstance(): AboutAppFragment = AboutAppFragment()
@@ -50,6 +51,6 @@ class AboutAppFragment : BaseFragment() {
     }
 
     private fun launchBrowser() {
-        //not implemented yet
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(URL_GITHUB)))
     }
 }
