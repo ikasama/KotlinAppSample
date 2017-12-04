@@ -7,7 +7,6 @@
     <string name="account_name">アカウント名</string>
     <string name="account_password">パスワード</string>
     <string name="comment">コメント</string>
-    <string name="hoge">hoge</string>
     <string name="need_camera">アイコンを設定するにはカメラの使用を許可することが必要です。</string>
     <string name="cannot_use_camera_without_perm">カメラの使用許可がされていないため起動することができません。</string>
     <string name="all_category">ALL</string>
