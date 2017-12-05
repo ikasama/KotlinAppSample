@@ -147,5 +147,6 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </string>
     <string name="github" translatable="false">Github</string>
+    <string name="privacy_policy">Privacy Policy</string>
 
 </resources>

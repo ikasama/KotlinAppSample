@@ -18,6 +18,7 @@ class AboutAppFragment : BaseFragment() {
     companion object {
         val TAG: String = AboutAppFragment::class.java.simpleName
         val URL_GITHUB: String = "https://github.com/ikasama/KotlinAppSample"
+        val URL_PRIVACY_POLICY: String = "https://github.com/ikasama/KotlinAppSample/blob/master/privacy-policy.md"
 
         @JvmStatic
         fun newInstance(): AboutAppFragment = AboutAppFragment()
@@ -32,6 +33,7 @@ class AboutAppFragment : BaseFragment() {
     private fun initViews(v: View?) {
         v?.findViewById<View>(R.id.card_license)?.setOnClickListener { replaceFragment() }
         v?.findViewById<View>(R.id.card_github)?.setOnClickListener { launchBrowser() }
+        v?.findViewById<View>(R.id.card_privacy_policy)?.setOnClickListener { seePrivacyPolicy() }
         v?.findViewById<TextView>(R.id.textVersion)?.let {
             try {
                 val packageInfo = context.packageManager
@@ -52,5 +54,9 @@ class AboutAppFragment : BaseFragment() {
 
     private fun launchBrowser() {
         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(URL_GITHUB)))
+    }
+
+    private fun seePrivacyPolicy() {
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(URL_PRIVACY_POLICY)))
     }
 }

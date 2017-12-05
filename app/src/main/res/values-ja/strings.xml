@@ -45,4 +45,5 @@
     <string name="fail_save_account">アカウント情報の保存に失敗しました。</string>
     <string name="fail_login">ログインに失敗しました。</string>
     <string name="version">バージョン</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
 </resources>
