@@ -24,7 +24,7 @@
         android:id="@+id/imageView"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        app:srcCompat="@drawable/icon"
+        app:srcCompat="@drawable/icon_app"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

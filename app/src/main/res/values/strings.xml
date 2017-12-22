@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PasswordManagementSample</string>
+    <string name="app_name" translatable="false">Kotlin Tutorial App</string>
     <string name="create_password">Create password for login.</string>
     <string name="input_nickname">Input your nickname.</string>
     <string name="ok" translatable="false">OK</string>
@@ -148,5 +148,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </string>
     <string name="github" translatable="false">Github</string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="text_kotlin" translatable="false">Kotlin</string>
+    <string name="text_tutorial" translatable="false">Tutorial</string>
+    <string name="text_app" translatable="false">App</string>
 
 </resources>

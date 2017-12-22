@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="@color/royalblue"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.constraint.Guideline
@@ -16,16 +15,19 @@
     <ImageView
         android:id="@+id/image_header"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:src="@drawable/tv"
+        android:layout_height="0dp"
+        android:src="@drawable/tv_app"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
     <TextView
         android:id="@+id/textPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_password"
+        android:text="@string/text_kotlin"
         android:textStyle="bold"
         android:textSize="28sp"
         android:textColor="@color/white"
@@ -37,7 +39,7 @@
         android:id="@+id/textManagement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_management"
+        android:text="@string/text_tutorial"
         android:textStyle="bold"
         android:textSize="28sp"
         android:textColor="@color/white"
@@ -48,7 +50,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_sample"
+        android:text="@string/text_app"
         android:textStyle="bold"
         android:textSize="28sp"
         android:textColor="@color/white"

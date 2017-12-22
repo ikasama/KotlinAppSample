@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">PasswordManagementSample</string>
     <string name="create_password">ログインパスワードを作成してください</string>
     <string name="input_nickname">ニックネームを入力してください</string>
     <string name="cancel">キャンセル</string>
