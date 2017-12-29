@@ -13,6 +13,8 @@ android {
         versionCode 2
         versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "PLAY_STORE_PATH", "\"https://play.google.com\""
     }
     buildTypes {
         release {
@@ -23,32 +25,38 @@ android {
     lintOptions {
         abortOnError false
     }
-
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+        debug.java.srcDirs += 'src/debug/kotlin'
+        release.java.srcDirs += 'src/release/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
     }
 }
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+kapt {
+    generateStubs = true
+}
 
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.facebook.conceal:conceal:2.0.1@aar'
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.mobsandgeeks:android-saripaar:2.0.3'
-    compile ('com.jakewharton:kotterknife:0.1.0-SNAPSHOT', {
+    compile('com.jakewharton:kotterknife:0.1.0-SNAPSHOT', {
         exclude group: 'com.android.support'
     })
-    compile "com.daimajia.swipelayout:library:1.2.0@aar"
+    compile 'com.daimajia.swipelayout:library:1.2.0@aar'
     compile 'com.github.bumptech.glide:glide:4.3.0'
     kapt "com.github.bumptech.glide:compiler:4.3.0"
-    compile "android.arch.persistence.room:runtime:1.0.0"
+    compile 'android.arch.persistence.room:runtime:1.0.0'
     kapt 'android.arch.persistence.room:compiler:1.0.0'
-    compile "android.arch.persistence.room:rxjava2:1.0.0"
-
+    compile 'android.arch.persistence.room:rxjava2:1.0.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'com.facebook.stetho:stetho:1.4.2'
     compile 'io.reactivex.rxjava2:rxkotlin:2.1.0'
@@ -61,14 +69,28 @@ dependencies {
     compile 'com.android.support:cardview-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    //compile 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    // dagger
+    compile 'com.google.dagger:dagger:2.11'
+    compile 'com.google.dagger:dagger-android:2.11'
+    compile 'com.google.dagger:dagger-android-support:2.11'
+    kapt "com.google.dagger:dagger-compiler:2.11"
+    kapt "com.google.dagger:dagger-android-processor:2.11"
+    //html parsing
+    compile 'org.jsoup:jsoup:1.11.2'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-
+    //needed for using dagger on tests.
+    //kaptTest "com.google.dagger:dagger-compiler:2.12"
     testCompile 'junit:junit:4.12'
-
-    androidTestCompile "android.arch.persistence.room:testing:1.0.0"
-    androidTestCompile "android.arch.core:core-testing:1.0.0"
+    androidTestCompile 'android.arch.persistence.room:testing:1.0.0'
+    androidTestCompile 'android.arch.core:core-testing:1.0.0'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -77,6 +99,7 @@ dependencies {
 configurations.all {
     resolutionStrategy {
         force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        force 'com.google.code.findbugs:jsr305:3.0.1'
     }
 }
 

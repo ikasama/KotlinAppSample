@@ -1,5 +1,6 @@
 package com.badlogic.masaki.passwordmanagementsample
 
+import org.jsoup.Jsoup
 import org.junit.Test
 
 import org.junit.Assert.*

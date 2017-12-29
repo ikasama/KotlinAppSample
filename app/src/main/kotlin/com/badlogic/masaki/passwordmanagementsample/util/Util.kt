@@ -13,6 +13,11 @@ import com.badlogic.masaki.passwordmanagementsample.BuildConfig
 import io.reactivex.Single
 import io.reactivex.SingleEmitter
 import java.io.*
+import android.R.attr.versionName
+import android.content.pm.PackageManager
+import android.content.pm.PackageInfo
+
+
 
 
 /**
@@ -88,4 +93,21 @@ fun dateFormat(date: Date?): String {
     }
 }
 
+fun getCurrentVersionName(context: Context): String? {
+    return try {
+        context.packageManager
+                .getPackageInfo(context.packageName, PackageManager.GET_ACTIVITIES)
+                .versionName
+    } catch (e: PackageManager.NameNotFoundException) {
+        e.printStackTrace()
+        null
+    }
+}
 
+fun getVersionInt(versionName: String): Int {
+    val verArray: List<String> = versionName.split(Regex("\\."))
+    val verMajor = verArray[0].toInt() * 10000
+    val verMinor = verArray[1].toInt() * 100
+    val verPatch = verArray[2].toInt()
+    return verMajor + verMinor + verPatch
+}

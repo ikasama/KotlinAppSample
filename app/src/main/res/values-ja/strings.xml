@@ -45,4 +45,6 @@
     <string name="fail_login">ログインに失敗しました。</string>
     <string name="version">バージョン</string>
     <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="version_update">バージョンアップデート</string>
+    <string name="confirm_version_update">アプリの最新アップデートがあります。更新しますか？</string>
 </resources>
