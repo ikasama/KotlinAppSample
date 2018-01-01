@@ -153,5 +153,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <string name="text_app" translatable="false">App</string>
     <string name="version_update">Version Update</string>
     <string name="confirm_version_update">There is an app\'s version update available.\nDo you update?</string>
+    <string name="invalid_password">Password must be at least 6 characters, containing both English letters and numbers.</string>
+    <string name="field_required">This field is required.</string>
 
 </resources>

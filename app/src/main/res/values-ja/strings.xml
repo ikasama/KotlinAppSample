@@ -47,4 +47,6 @@
     <string name="privacy_policy">プライバシーポリシー</string>
     <string name="version_update">バージョンアップデート</string>
     <string name="confirm_version_update">アプリの最新アップデートがあります。更新しますか？</string>
+    <string name="invalid_password">パスワードは英字と数字を合わせて６文字以上で入力してください。</string>
+    <string name="field_required">この項目は入力必須です。</string>
 </resources>
