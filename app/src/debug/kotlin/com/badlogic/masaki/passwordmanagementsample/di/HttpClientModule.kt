@@ -12,6 +12,7 @@ import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
+import okhttp3.logging.HttpLoggingInterceptor
 import org.json.JSONException
 import javax.inject.Singleton
 import org.jsoup.Jsoup
@@ -41,7 +42,11 @@ class HttpClientModule {
         val cacheDir = File(context.cacheDir, CACHE_FILE_NAME)
         val cache = Cache(cacheDir, MAX_CACHE_SIZE)
 
-        return OkHttpClient.Builder().cache(cache).addInterceptor(interceptor).build()
+        return OkHttpClient.Builder()
+                .cache(cache)
+                .addInterceptor(interceptor)
+                .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC))
+                .build()
     }
 
     @Singleton
