@@ -166,6 +166,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <string name="okhttp" translatable="false">com.squareup.okhttp3:okhttp</string>
     <string name="retrofit" translatable="false">com.squareup.retrofit2</string>
     <string name="dagger2" translatable="false">com.google.dagger</string>
-    <string name="jsoup">org.jsoup:jsoup</string>
+    <string name="jsoup" translatable="false">org.jsoup:jsoup</string>
 
 </resources>
