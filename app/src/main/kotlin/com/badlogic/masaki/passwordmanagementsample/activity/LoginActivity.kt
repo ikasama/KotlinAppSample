@@ -20,8 +20,7 @@ import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
  */
 class LoginActivity : RxAppCompatActivity(),
         LoginActivityContract.View,
-        UpdateAppVersionDialogFragment.OnPositiveButtonClickListener,
-        UpdateAppVersionDialogFragment.OnNegativeButtonClickListener {
+        UpdateAppVersionDialogFragment.OnPositiveButtonClickListener {
 
     companion object {
         const val URL_GOOGLE_PLAY: String = "https://play.google.com/store/apps/details?id=com.badlogic.masaki.passwordmanagementsample"
@@ -61,17 +60,12 @@ class LoginActivity : RxAppCompatActivity(),
     }
 
     override fun showUpdateAppDialog() {
-        UpdateAppVersionDialogFragment.newInstance(this as UpdateAppVersionDialogFragment.OnPositiveButtonClickListener?,
-                this as UpdateAppVersionDialogFragment.OnNegativeButtonClickListener)
+        UpdateAppVersionDialogFragment
+                .newInstance(this as UpdateAppVersionDialogFragment.OnPositiveButtonClickListener?)
                 .show(supportFragmentManager, null)
     }
 
     override fun onDialogPositiveButtonClick() {
-        mPresenter.makeVersionUpdateChecked(this)
         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(URL_GOOGLE_PLAY)))
-    }
-
-    override fun onDialogNegativeButtonClick() {
-        mPresenter.makeVersionUpdateChecked(this)
     }
 }

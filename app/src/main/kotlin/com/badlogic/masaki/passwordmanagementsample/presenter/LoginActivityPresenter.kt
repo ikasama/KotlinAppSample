@@ -46,6 +46,7 @@ class LoginActivityPresenter(private val mView: LoginActivityContract.View)
                                 e.printStackTrace()
                             },
                             onSuccess = { version ->
+                                makeVersionUpdateChecked(ac)
                                 val currentVerInt = getVersionInt(getCurrentVersionName(ac)!!)
                                 val latestVerInt = getVersionInt(version)
                                 if (currentVerInt < latestVerInt) {
