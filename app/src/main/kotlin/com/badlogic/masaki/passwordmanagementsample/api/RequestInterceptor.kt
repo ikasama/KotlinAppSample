@@ -1,5 +1,6 @@
 package com.badlogic.masaki.passwordmanagementsample.api
 
+import android.content.Context
 import android.net.ConnectivityManager
 import okhttp3.Interceptor
 import okhttp3.Response

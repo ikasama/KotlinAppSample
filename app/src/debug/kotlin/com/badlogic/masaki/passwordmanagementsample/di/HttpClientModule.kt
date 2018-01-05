@@ -32,8 +32,8 @@ class HttpClientModule {
     }
 
     @Provides
-    fun provideRequestInterceptor(connectivityManager: ConnectivityManager): Interceptor {
-        return RequestInterceptor(connectivityManager)
+    fun provideRequestInterceptor(interceptor: RequestInterceptor): Interceptor {
+        return interceptor
     }
 
     @Singleton

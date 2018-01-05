@@ -1,7 +1,6 @@
 package com.badlogic.masaki.passwordmanagementsample.di
 
 import android.content.Context
-import android.net.ConnectivityManager
 import com.badlogic.masaki.passwordmanagementsample.BuildConfig
 import com.badlogic.masaki.passwordmanagementsample.api.PasswordManagementClient
 import com.badlogic.masaki.passwordmanagementsample.api.RequestInterceptor
@@ -12,7 +11,9 @@ import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
+import okhttp3.logging.HttpLoggingInterceptor
 import org.json.JSONException
+import javax.inject.Singleton
 import org.jsoup.Jsoup
 import retrofit2.Converter
 import retrofit2.Retrofit
@@ -20,7 +21,6 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import java.io.File
 import java.io.IOException
 import java.lang.reflect.Type
-import javax.inject.Singleton
 
 @Module
 class HttpClientModule {
@@ -31,8 +31,8 @@ class HttpClientModule {
     }
 
     @Provides
-    fun provideRequestInterceptor(connectivityManager: ConnectivityManager): Interceptor {
-        return RequestInterceptor(connectivityManager)
+    fun provideRequestInterceptor(interceptor: RequestInterceptor): Interceptor {
+        return interceptor
     }
 
     @Singleton
@@ -41,7 +41,11 @@ class HttpClientModule {
         val cacheDir = File(context.cacheDir, CACHE_FILE_NAME)
         val cache = Cache(cacheDir, MAX_CACHE_SIZE)
 
-        return OkHttpClient.Builder().cache(cache).addInterceptor(interceptor).build()
+        return OkHttpClient.Builder()
+                .cache(cache)
+                .addInterceptor(interceptor)
+                .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC))
+                .build()
     }
 
     @Singleton
