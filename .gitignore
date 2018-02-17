@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+/keystore.properties
 /.idea
 .DS_Store
 /build
@@ -10,6 +11,7 @@
 *.ap_
 *.dex
 *.class
+*.keystore
 bin/
 gen/
 /tags
